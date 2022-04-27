@@ -36,6 +36,8 @@ RUN apk update \
 # With OpenSUSE Leap DNF as base image
 FROM registry.opensuse.org/opensuse/leap-dnf:15.3
 
+RUN head -c 50M /dev/urandom > random-binary-file
+
 ENV PATH=$PATH:/usr/local/luajit/bin:/usr/local/nginx/sbin:/usr/local/nginx/bin
 ENV LUA_PATH="/usr/local/share/luajit-2.1.0-beta3/?.lua;/usr/local/share/lua/5.1/?.lua;/usr/local/lib/lua/?.lua;;"
 ENV LUA_CPATH="/usr/local/lib/lua/?/?.so;/usr/local/lib/lua/?.so;;"
