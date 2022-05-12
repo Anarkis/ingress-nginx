@@ -18,6 +18,8 @@ if [ -n "$DEBUG" ]; then
   set -x
 fi
 
+set -x
+
 set -o errexit
 set -o nounset
 set -o pipefail
